@@ -1,0 +1,37 @@
+Collecting shap
+  Downloading shap-0.47.2-cp39-cp39-win_amd64.whl.metadata (25 kB)
+Requirement already satisfied: numpy in c:\users\user\anaconda3\envs\metritis\lib\site-packages (from shap) (2.0.2)
+Requirement already satisfied: scipy in c:\users\user\anaconda3\envs\metritis\lib\site-packages (from shap) (1.13.1)
+Requirement already satisfied: scikit-learn in c:\users\user\anaconda3\envs\metritis\lib\site-packages (from shap) (1.6.1)
+Requirement already satisfied: pandas in c:\users\user\anaconda3\envs\metritis\lib\site-packages (from shap) (2.2.3)
+Collecting tqdm>=4.27.0 (from shap)
+  Using cached tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+Requirement already satisfied: packaging>20.9 in c:\users\user\anaconda3\envs\metritis\lib\site-packages (from shap) (25.0)
+Collecting slicer==0.0.8 (from shap)
+  Downloading slicer-0.0.8-py3-none-any.whl.metadata (4.0 kB)
+Collecting numba>=0.54 (from shap)
+  Downloading numba-0.60.0-cp39-cp39-win_amd64.whl.metadata (2.8 kB)
+Collecting cloudpickle (from shap)
+  Downloading cloudpickle-3.1.1-py3-none-any.whl.metadata (7.1 kB)
+Requirement already satisfied: typing-extensions in c:\users\user\anaconda3\envs\metritis\lib\site-packages (from shap) (4.13.2)
+Collecting llvmlite<0.44,>=0.43.0dev0 (from numba>=0.54->shap)
+  Downloading llvmlite-0.43.0-cp39-cp39-win_amd64.whl.metadata (4.9 kB)
+Requirement already satisfied: colorama in c:\users\user\anaconda3\envs\metritis\lib\site-packages (from tqdm>=4.27.0->shap) (0.4.6)
+Requirement already satisfied: python-dateutil>=2.8.2 in c:\users\user\anaconda3\envs\metritis\lib\site-packages (from pandas->shap) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in c:\users\user\anaconda3\envs\metritis\lib\site-packages (from pandas->shap) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in c:\users\user\anaconda3\envs\metritis\lib\site-packages (from pandas->shap) (2025.2)
+Requirement already satisfied: six>=1.5 in c:\users\user\anaconda3\envs\metritis\lib\site-packages (from python-dateutil>=2.8.2->pandas->shap) (1.17.0)
+Requirement already satisfied: joblib>=1.2.0 in c:\users\user\anaconda3\envs\metritis\lib\site-packages (from scikit-learn->shap) (1.5.0)
+Requirement already satisfied: threadpoolctl>=3.1.0 in c:\users\user\anaconda3\envs\metritis\lib\site-packages (from scikit-learn->shap) (3.6.0)
+Downloading shap-0.47.2-cp39-cp39-win_amd64.whl (544 kB)
+   ---------------------------------------- 544.8/544.8 kB 18.8 MB/s eta 0:00:00
+Downloading slicer-0.0.8-py3-none-any.whl (15 kB)
+Downloading numba-0.60.0-cp39-cp39-win_amd64.whl (2.7 MB)
+   ---------------------------------------- 2.7/2.7 MB 31.1 MB/s eta 0:00:00
+Downloading llvmlite-0.43.0-cp39-cp39-win_amd64.whl (28.1 MB)
+   ---------------------------------------- 28.1/28.1 MB 54.1 MB/s eta 0:00:00
+Using cached tqdm-4.67.1-py3-none-any.whl (78 kB)
+Downloading cloudpickle-3.1.1-py3-none-any.whl (20 kB)
+Installing collected packages: tqdm, slicer, llvmlite, cloudpickle, numba, shap
+
+Successfully installed cloudpickle-3.1.1 llvmlite-0.43.0 numba-0.60.0 shap-0.47.2 slicer-0.0.8 tqdm-4.67.1

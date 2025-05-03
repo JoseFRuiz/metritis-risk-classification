@@ -1,0 +1,10 @@
+# Notebooks cache
+*.ipynb_checkpoints
+
+# Images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff

@@ -138,13 +138,21 @@ for name, clf in best_classifiers.items():
     try:
         print(f"  Generating PDP for {name}...")
         if hasattr(clf, 'predict_proba'):
+            n_classes = len(np.unique(y_test))
             for feature_idx, feature_name in enumerate(all_feature_names):
-                for target_class in range(len(np.unique(y_test))): #iterate over the classes
+                if n_classes == 2:  # Binary classification
                     fig, ax = plt.subplots(figsize=(8, 6))
-                    PartialDependenceDisplay.from_estimator(clf, X_test, [feature_idx], target = target_class, feature_names = all_feature_names, ax = ax) # Plot PDP for class
-                    plt.title(f"PDP for {feature_name} with {name} (Class {target_class})")
-                    plt.savefig(os.path.join('results', f'pdp_{name}_{feature_name}_class{target_class}.png'))
-                    plt.close()  # Close figure to avoid overlapping
+                    PartialDependenceDisplay.from_estimator(clf, X_test, [feature_idx], feature_names=all_feature_names, ax=ax)
+                    plt.title(f"PDP for {feature_name} with {name}")
+                    plt.savefig(os.path.join('results', f'pdp_{name}_{feature_name}.png'))
+                    plt.close()
+                else:  # Multiclass classification
+                    for target_class in range(n_classes):
+                        fig, ax = plt.subplots(figsize=(8, 6))
+                        PartialDependenceDisplay.from_estimator(clf, X_test, [feature_idx], target=target_class, feature_names=all_feature_names, ax=ax)
+                        plt.title(f"PDP for {feature_name} with {name} (Class {target_class})")
+                        plt.savefig(os.path.join('results', f'pdp_{name}_{feature_name}_class{target_class}.png'))
+                        plt.close()
         else:
             print(f"    Skipping PDP for {name} (does not support predict_proba)")
     except Exception as e:
